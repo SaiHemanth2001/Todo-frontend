@@ -59,8 +59,18 @@ const TodoList = () => {
             alert('error')
         })
     }
+
+    const handler = (e)=>{
+        e.preventDefault();
+       localStorage.removeItem("jwt")
+       navigate('/')      
+    }
   return (
     <div>
+     <div className='button-container'>
+    <span><a className='btn btn-danger' onClick={handler}>Sign Out</a></span>
+    </div>
+    <br />
         <h1 className='top'>TodoList</h1>
 
         <div className="form-group mt-3">

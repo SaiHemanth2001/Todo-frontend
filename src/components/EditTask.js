@@ -33,9 +33,18 @@ const EditTask = () => {
         })
     }
 
+    const handler = (e)=>{
+        e.preventDefault();
+       navigate(-1);      
+    }
+
 
     return (
         <div>
+             <div className='button-container'>
+    <span><a className='btn btn-warning' onClick={handler}>Back to List</a></span>
+    </div>
+    <br />
             <h1 className='top'>TodoList</h1>
 
             <div className="form-group mt-3">
